@@ -82,7 +82,84 @@ header {
 
 .flex-item:hover {
     text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 3px;
 }
+
+
+
+.dropdown {
+	overflow: hidden;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background: white;
+	width: 100%;
+    border-bottom: grey 2px solid;
+	left: 0;
+	z-index: 10;
+}
+
+
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+
+.dropdown-inner {
+    display: flex;
+    max-width: 1200px; /* Larghezza massima */
+    margin: 0 auto; /* Centrato */
+    padding: 20px;
+    gap: 50px;
+}
+
+/* Sezione sinistra (categorie) */
+.dropdown-left {
+    flex: 1;
+    min-width: 200px;
+}
+
+.dropdown-left-top {
+    border-bottom: grey 1px solid;
+}
+
+.dropdown-left h3 {
+    font-size: 60%;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+.dropdown-left p {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    text-decoration: none;
+    font-size: 60%;
+    color: black;
+}
+
+.dropdown-left p img {
+    width: 25%;
+    height: auto;
+}
+
+/* Sezione destra (prodotti) */
+.dropdown-right {
+    flex: 3;
+}
+
+.dropdown-right h3 {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Layout a griglia per i prodotti */
+
 
 
 
@@ -354,9 +431,6 @@ header {
 
 
 
-
-
-
 .foto_fullwidth_article img{
     width: 100%;
     border-radius: 10px;
@@ -428,7 +502,6 @@ header {
 
     #top-bar-sotto {
         margin-left: auto;
-        margin-right: 10%;
         padding: 5px 10px;
         font-size: 12px;
         flex-direction: row;
@@ -440,7 +513,7 @@ header {
     }
 
     .bar {
-        margin-left: 10px;
+        margin-right: 100px;
         flex-direction: row;
         align-items: flex-start;
         padding: 10px 0;
@@ -460,6 +533,16 @@ header {
         margin-right: 15px;
     }
 
+    .dropdown-content {
+        margin-top: 5px;
+        width: 100%;
+	    right: 80%;
+    }
+
+    .dropdown-left p {
+        font-size: 120%;
+        color: black;
+    }
 
 
     .flex-item {
